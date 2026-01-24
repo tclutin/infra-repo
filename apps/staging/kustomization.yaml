@@ -6,3 +6,5 @@ patches:
   - path: podinfo-values.yaml
     target:
       kind: HelmRelease
+      name: podinfo
+      namespace: flux-system
