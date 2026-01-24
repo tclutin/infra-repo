@@ -7,9 +7,6 @@ spec:
   targetNamespace: podinfo
   releaseName: podinfo
   interval: 10m
-  install:
-    remediation:
-      retries: 3
   chart:
     spec:
       chart: ./podinfo
