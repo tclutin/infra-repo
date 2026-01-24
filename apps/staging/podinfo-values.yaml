@@ -16,4 +16,4 @@ spec:
         kind: GitRepository
         name: podinfo
   values:
-    replicas: 2
+    replicas: 1
