@@ -14,6 +14,6 @@ spec:
       chart: ./podinfo
       sourceRef:
         kind: GitRepository
-        name: flux-system
+        name: podinfo
   values:
     replicas: 1
