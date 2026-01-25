@@ -141,7 +141,7 @@ kubectl events podinfo-cd4696f4b-4jdtn -n podinfo
 kubectl delete helmchart flux-system-podinfo -n flux-system
 ```
 
-Теперь посмотрим, что произошло. К примеру мы поменяли helmchat-манифесты/values, но обновления не закатились, хотя прежние поды работают. Раз у нас Flux, то скорей всего произошло что-то с helmrelease или gitrepository в нашем случае, ведь синхронизации нет. 
+Теперь посмотрим, что произошло. К примеру мы поменяли helmchart-манифесты/values, но обновления не закатились, хотя прежние поды работают. Раз у нас Flux, то скорей всего произошло что-то с helmrelease или gitrepository в нашем случае, ведь синхронизации нет. 
 
 Смотрим ивенты helmrelease.
 
@@ -151,7 +151,7 @@ kubectl events helmrelease podinfo -n flux-system
 
 ![alt text](./images/helmrelease.png)
 
-Видим, что helmchat не может найти git source по имени "podinfo". Теперь проверим gitrepository в неймспейсе flux-system с имененм "podinfo".
+Видим, что helmchart не может найти git source по имени "podinfo". Теперь проверим gitrepository в неймспейсе flux-system с имененм "podinfo".
 
 ```bash
 kubectl get gitrepository -n flux-system
