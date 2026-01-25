@@ -133,7 +133,7 @@ kubectl events podinfo-cd4696f4b-4jdtn -n podinfo
 Так как у нас FluxCD мониторит репозитории, то просто пушим изменения и ждем. Все сработало.
 ![alt text](./images/pod-running.png)
 
-#### Cломал наш git source для apps-repo, перенес его из flux-sysem в namespace podinfo
+#### Cломал наш git source для apps-repo, перенес его из flux-system в namespace podinfo
 
 Также удалил helmchart из k8s, чтобы он его не подтягивал из "кеша" при обновлении values
 
