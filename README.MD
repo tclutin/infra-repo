@@ -161,7 +161,7 @@ kubectl get gitrepository -n flux-system
 
 В неймспейса flux-system отсутствует ресурс gitrepository с именем "podinfo".
 
-**(решение)** Проверим наши манифесты с gitrepository и helmrelease, они должны находится в 1 namespace, в нашем случае в flux-system. GitRepository оказался в namepsace podinfo, а HelmRelease в flux-system, а теперь просто меняем в GitRepository namespace: podinfo на namespace: flux-system. И все работает.
+**(решение)** Проверим наши манифесты с gitrepository и helmrelease, они должны находится в 1 namespace, в нашем случае в flux-system. GitRepository оказался в namespace podinfo, а HelmRelease в flux-system, а теперь просто меняем в GitRepository namespace: podinfo на namespace: flux-system. И все работает.
 
 ![alt text](./images/done.png)
 
