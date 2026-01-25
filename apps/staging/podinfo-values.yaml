@@ -16,6 +16,6 @@ spec:
   values:
     replicaCount: 2
     image:
-      repository: ghcr.io/stefanprodan/podinfo
+      repository: ghcr.io/qqstefanprodan/podinfo
       tag: "6.9.4"
       pullPolicy: IfNotPresent
