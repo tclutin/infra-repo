@@ -166,7 +166,7 @@ kubectl get gitrepository -n flux-system
 ![alt text](./images/done.png)
 
 
-P.S забыл пункт добавить, если посмотреть ивенты ресурса gitrepository с именем podinfo, когда он находился в namespace podinfo, то там были ошибки вида failted to get secret, что логично, ведь секреты находятся в namespace flux-system
+P.S забыл пункт добавить, если посмотреть ивенты ресурса gitrepository с именем podinfo, когда он находился в namespace podinfo, то там были ошибки вида failed to get secret, что логично, ведь секреты находятся в namespace flux-system
 
 #### Просто сломал структура Deployment в Helm-чарте в apps-repo и запушил
 
