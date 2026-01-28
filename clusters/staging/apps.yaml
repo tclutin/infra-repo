@@ -1,12 +1,39 @@
+# apiVersion: kustomize.toolkit.fluxcd.io/v1
+# kind: Kustomization
+# metadata:
+#   name: apps
+#   namespace: flux-system
+# spec:
+#   interval: 10m0s
+#   path: ./apps/staging
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: flux-system
+
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: app-repo
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  secretRef:
+    name: flux-system
+  url: https://github.com/tclutin/apps-repo.git
+---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: apps
+  name: flux-system
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./apps/staging
+  path: ./podinfo
   prune: true
   sourceRef:
     kind: GitRepository
-    name: flux-system
+    name: apps-repo
